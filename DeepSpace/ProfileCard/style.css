@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #363c44;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #f4f6f6bd;
+    font: 15px 'Raleway', Hack;
+}
+
+h1 {
+    font-family: 'Hack';
+    font-weight: bolder;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h2, .city {
+    letter-spacing: 1px;
+    color: #c3cfdb;
+}
+
+.card {
+    width: 360px;
+    height: 500px;
+    box-shadow: 5px 7px 10px #54605d8c;
+    position: relative;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    background: #f4f6f6;
+    width: 35px;
+    height: 1px;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+
+.card::before {
+    transform: rotate(45deg);
+}
+.card::after {
+    transform: rotate(-45deg);
+}
+
+.container {
+    width: 100%;
+}
+
+.top {
+    background-image: linear-gradient(rgba(28, 29, 29, 0.5),rgba(50, 51, 51, 0.5)), url('./demo.jpg');
+    height: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 5px 1px 20px 5px rgb(34, 34, 34);
+}
+
+.top .name h1,
+.top .name .city {
+    padding: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.top .name .city {
+    font-size: 23px;
+}
+
+.top .number {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+}
+
+.number .likes,
+.number .followers,
+.number .following {
+    padding: 0 20px;
+}
+
+.number .likes,
+.number .followers {
+    border-right: 1px solid #bdc3c7;
+}
+
+.bottom {
+    background: #9ce5bb;
+    font-size: 25px;
+    text-align: center;
+    height: 15%;
+    line-height: 75px;
+    transition: all .7s;
+    color: #fff;
+    letter-spacing: 3px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 5px 1px 20px 5px rgb(34, 34, 34);
+}
+
+.bottom:hover {
+    cursor: pointer;
+    background: #ee856e;
+}
