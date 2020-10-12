@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Zing component</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: #DDD;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .album-cover {
+            width: 128px;
+            height: 128px;
+            background-color: #a3a3a3;
+            background-image: url(https://loremflickr.com/320/240);
+            background-size: cover;
+        }
+
+        .album-cover .overlay {
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+        }
+
+        .album-cover .overlay span {
+            font-size: 30px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="album-cover">
+        <div class="overlay">
+            <span>02</span>
+        </div>
+    </div>
+</body>
+
+</html>

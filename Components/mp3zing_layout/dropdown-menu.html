@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+            font-size: 20px;
+            color: #fff;
+            
+        }
+
+        body {
+            background: #bbb;
+        }
+
+        .menu {
+            list-style-type: none;
+            display: flex;
+            background: #079992;
+            box-shadow: 0px 5px 10px black;
+            position: relative;
+
+        }
+
+        .menu li {
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .menu li:hover {
+            background-color: #046d68;
+            font-weight: bold;
+        }
+
+        .has-submenu:hover .submenu {
+            display: block;
+
+        }
+
+        .has-submenu {
+            position: relative;
+        }
+
+        .submenu {
+            list-style-type: none;
+            position: absolute;
+            display: none;
+            left: 0;
+            top:100%;
+            background-color:#6dddd7;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Home</li>
+        <li class="has-submenu">
+            Product
+            <ul class="submenu">
+                <li>Java</li>
+                <li>Bootstrap</li>
+                <li>Hibernate</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>About us</li>
+        <li>FAQs</li>
+    </ul>
+</body>
+</html>

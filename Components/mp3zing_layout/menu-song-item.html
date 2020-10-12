@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Zing component</title>
+    <style>
+      
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: #DDD;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .weekly-item {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            width: 20%;
+            border: 1px solid #a3a3a3;
+            box-shadow: 3px 3px 15px rgb(75, 74, 74);
+            transition: all .3s;
+            background-color: rgb(235, 235, 235);
+            border-radius: 15px;
+        }
+
+        .weekly-item:hover {
+            transform: scale(1.1);
+            box-shadow: 15px 15px 20px rgb(75, 74, 74);
+            cursor: pointer;
+        }
+
+        .weekly-item .number {
+            font-size: 20px;
+            padding: 0 8px;
+        }
+
+        .weekly-item .info {
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        .weekly-item .song-title {
+            margin-bottom: 5px;
+        }
+
+        .weekly-item .singer,
+        .view-count {
+            font-size: 13px;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weekly-item">
+        <div class="number">01</div>
+        <div class="info">
+            <div class="song-title">Hơn cả yêu</div>
+            <div class="singer">Đức Phúc</div>
+        </div>
+        <div class="view-count">2,291</div>
+    </div>
+    <div class="weekly-item">
+        <div class="number">02</div>
+        <div class="info">
+            <div class="song-title">Có em đời bỗng vui</div>
+            <div class="singer">Chilles</div>
+        </div>
+        <div class="view-count">6,321</div>
+    </div>
+    <div class="weekly-item">
+        <div class="number">01</div>
+        <div class="info">
+            <div class="song-title">Hơn cả yêu</div>
+            <div class="singer">Đức Phúc</div>
+        </div>
+        <div class="view-count">2,291</div>
+    </div>
+    <div class="weekly-item">
+        <div class="number">01</div>
+        <div class="info">
+            <div class="song-title">Hơn cả yêu</div>
+            <div class="singer">Đức Phúc</div>
+        </div>
+        <div class="view-count">2,291</div>
+    </div>
+    <div class="weekly-item">
+        <div class="number">01</div>
+        <div class="info">
+            <div class="song-title">Hơn cả yêu</div>
+            <div class="singer">Đức Phúc</div>
+        </div>
+        <div class="view-count">2,291</div>
+    </div>
+</body>
+
+</html>
