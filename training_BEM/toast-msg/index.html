@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toast by BEM</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b2cccbdfee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="toast">
+
+  </div>
+
+  <div>
+    <button onclick="showSuccessToast()" class="btn btn--success">Show Success</button>
+    <button onclick="showErrorToast()" class="btn btn--danger">Show Error</button>
+  </div>
+
+  <!-- <div class="toast toast--success">
+    <div class="toast__icon">
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="toast__body">
+      <h3 class="toast__title">Success</h3>
+      <p class="toast__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.</p>
+    </div>
+    <div class="toast__close">
+      <i class="fa fa-times"></i>
+    </div>
+  </div> -->
+
+
+  <!-- <div class="toast toast--info">
+    <div class="toast__icon">
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="toast__body">
+      <h3 class="toast__title">Info</h3>
+      <p class="toast__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.</p> 
+    </div>
+    <div class="toast__close">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+
+  <div class="toast toast--warn">
+    <div class="toast__icon">
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="toast__body">
+      <h3 class="toast__title">Warning</h3>
+      <p class="toast__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.</p> 
+    </div>
+    <div class="toast__close">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+
+  <div class="toast toast--danger">
+    <div class="toast__icon">
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="toast__body">
+      <h3 class="toast__title">Error</h3>
+      <p class="toast__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.</p> 
+    </div>
+    <div class="toast__close">
+      <i class="fa fa-times"></i>
+    </div>
+  </div> -->
+
+
+  <script>
+    function toast({ title = '', message = '', type = 'info', duration = 3000 }) {
+      const main = document.getElementById('toast');
+      const icons = {
+        success: 'fa fa-check-circle',
+        info: 'fa fa-info-circle',
+        warn: 'fa fa-exclamation-circle',
+        danger: 'fa fa-exclamation-circle'
+      }
+
+      const icon = icons[type]
+      if (main) {
+        const toast = document.createElement('div'); 
+
+        const autoRemove = setTimeout(() => {
+          main.removeChild(toast);
+        }, duration + 1000);
+        
+        // close button
+        toast.onclick = function(event) {
+          if(event.target.closest('.toast__close')) {
+            main.removeChild(toast);
+            clearTimeout(autoRemove);
+          }
+        }
+
+        const delay = (duration / 1000).toFixed(2);
+        toast.classList.add('toast', `toast--${type}`);
+        toast.style.animation = `slideInLeft ease .8s, fadeOut linear .6s ${delay}s forwards`
+        toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="${icon}"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">${title}</h3>
+            <p class="toast__message">${message}</p>
+          </div>
+          <div class="toast__close">
+            <i class="fa fa-times"></i>
+          </div>
+        `;
+        main.appendChild(toast);
+      }
+    }
+
+    // toast({
+    //   title: 'Success',
+    //   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.',
+    //   type: 'success',
+    //   duration: 3000
+    // });
+
+
+    function showSuccessToast() {
+      toast({
+        title: 'Success',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.',
+        type: 'success',
+        duration: 5000
+      });
+    }
+
+    function showErrorToast() {
+      toast({
+        title: 'Error',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolores.',
+        type: 'danger',
+        duration: 3000
+      });
+    }
+  </script>
+</body>
+
+</html>

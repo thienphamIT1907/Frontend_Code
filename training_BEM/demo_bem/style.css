@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'roboto';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3em;
+  flex-direction: column;
+  background: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .4s;
+  min-width: 120px;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn--success {
+  background-color: #71be34;
+}
+
+.btn--warn {
+  background-color: #ffb702;
+}
+
+.btn--danger {
+  background-color: #ff623d
+}
+
+/* trick: Các button liên tiếp nhau sẽ tự cách ra 16px */
+.btn + .btn {
+  margin-left: 16px;
+}
+
+.btn--disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+.btn--size-l {
+  padding: 20px 50px;
+}
+
+.btn--size-s {
+  padding: 8px 32px;
+}
